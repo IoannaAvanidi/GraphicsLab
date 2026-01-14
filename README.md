@@ -1,38 +1,36 @@
-# OpenGL Assignment 1-C: Treasure Hunt
+# OpenGL 2D Maze Game
 
-[cite_start]An interactive 3D game application developed using **OpenGL 3.3+**, extending the previous 3D maze project with game mechanics and texturing. [cite: 1184, 1185, 1186]
+[cite_start]A 2D graphics application developed using **OpenGL 3.3** for the "Computer Graphics and Interaction Systems" course (2024-2025) at the University of Ioannina[cite: 1171, 1173, 1175].
 
-## 🎮 Game Mechanics
+## 🎮 Project Overview
 
-* [cite_start]**Maze & Character**: Features a 3D maze made of blue cubes (side length 1) and a yellow cube character (A) with a side length of 0.5. [cite: 1198, 1199]
-* [cite_start]**Treasure Spawning**: A treasure object (B) appears periodically in random, valid positions within the maze. [cite: 1202, 1204]
-* [cite_start]**Collision & Collection**: When Character A touches the treasure, the treasure shrinks to half its size before disappearing. [cite: 1209]
-* [cite_start]**Treasure Design**: The treasure is a 0.8-scale cube textured with `coins.jpg`. [cite: 1206, 1207]
+[cite_start]The objective of this project is to create a windowed application that renders a 2D maze and a movable character[cite: 1174, 1176]. [cite_start]The maze is represented by a 2D array of 0s and 1s, where "1" represents a wall and "0" represents a path[cite: 1186].
 
-## 🚀 Key Features
-
-* [cite_start]**3D Texturing**: Implementation of texture mapping on 3D models using provided image files. [cite: 1207]
-* [cite_start]**Randomized Logic**: Automatic generation of treasure coordinates that do not overlap with walls or the player's current position. [cite: 1202, 1203]
-* [cite_start]**Interactive Camera**: A comprehensive 3D camera system supporting rotation, zooming, and panning. [cite: 1211, 1212]
-* [cite_start]**Visual Transitions**: Dynamic scaling of objects to provide visual feedback during game interactions. [cite: 1209, 1210]
-
-## 🛠️ Technical Details
-
-* [cite_start]**Libraries**: Strictly developed using **GLFW**, **GLEW**, and **GLM**. [cite: 1231]
-* [cite_start]**Initial Setup**: A 950x950 window with the camera positioned at (0.0, 0.0, 20.0) looking towards (0, 0, 0.25). [cite: 1193, 1219]
-* [cite_start]**Transformation Strategy**: The project utilizes coordinate determination and vertex buffers to manage 3D shapes. [cite: 1208]
+### Core Mechanics
+* [cite_start]**Maze Design**: The maze consists of blue squares sitting on the XY plane with a Z component of 0[cite: 1186, 1191]. [cite_start]The center of the maze is at point (0,0)[cite: 1188].
+* [cite_start]**Character A**: A yellow square with a side length of 0.5, initially placed at the maze entrance[cite: 1178, 1215, 1216].
+* [cite_start]**Collision Logic**: Character A is restricted from passing through walls or leaving the maze boundaries[cite: 1224].
 
 ## ⌨️ Controls
 
-* [cite_start]**Movement**: Use `I` (Up), `K` (Down), `J` (Left), and `L` (Right). [cite: 1153, 1154, 1155, 1156, 1192]
-* **Camera Rotation**:
-    * [cite_start]**X-axis**: `<w>` and `<x>` [cite: 1214]
-    * [cite_start]**Y-axis**: `<q>` and `<z>` [cite: 1215]
-* **Camera Panning**:
-    * [cite_start]**X-axis**: `<g>` and `<h>` [cite: 1217]
-    * [cite_start]**Y-axis**: `<t>` and `<b>` [cite: 1218]
-* [cite_start]**Zoom**: Use `<+>` and `<->` keys on the numerical keypad. [cite: 1216]
-* [cite_start]**Exit**: Press `SPACE` to close the application. [cite: 1196]
+* **Movement**:
+    * [cite_start]`I`: Move Up [cite: 1223]
+    * [cite_start]`K`: Move Down [cite: 1222]
+    * [cite_start]`J`: Move Left [cite: 1221]
+    * [cite_start]`L`: Move Right [cite: 1220]
+* [cite_start]**Exit**: Press `Q` to terminate the application[cite: 1184].
+
+## 🚀 Key Features
+
+* [cite_start]**Geometric Rendering**: Walls are rendered using triangle primitives, with all vertex coordinates manually determined and stored in arrays[cite: 1187, 1189].
+* [cite_start]**Black Background**: The 750x750 application window features a consistent black background[cite: 1182].
+* [cite_start]**Pure OpenGL**: Developed strictly using the **GLFW**, **GLEW**, and **GLM** libraries[cite: 1231].
+
+## 🛠️ Technical Specifications
+
+* [cite_start]**Window Resolution**: 750 x 750 pixels[cite: 1182].
+* [cite_start]**Window Title**: "Άσκηση 14 - 2024"[cite: 1183].
+* [cite_start]**Coordinate Mapping**: Each grid square has a side length of 1[cite: 1188].
 
 ---
-[cite_start]*This project was implemented for the Department of Computer Science & Engineering at the University of Ioannina, December 2024.* [cite: 1181, 1182, 1183, 1229]
+[cite_start]*This project was implemented for the Department of Computer Science & Engineering at the University of Ioannina.* [cite: 1171, 1172]
