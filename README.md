@@ -21,7 +21,7 @@ The application features a 3D maze environment where the player controls a chara
 
 ## 🛠️ Tech Stack
 
-* **Language:** C++
+* **Language:** C#
 * **Graphics API:** OpenGL 3.3+
 * **Libraries:** * **GLFW:** Window & Input management.
     * **GLEW:** OpenGL Extension Wrangler.
